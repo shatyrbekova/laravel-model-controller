@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use APP\Movie;
+use App\Movie;
 class HomeController extends Controller
 {
     // 
@@ -12,7 +12,9 @@ class HomeController extends Controller
         // return view('welcome');
        
         $allMovies = Movie::all();
-        dump($allMovies);
+        // dump($allMovies);
+        // dump($allMovies[0]->title);
+          return view('home', compact('allMovies'));
 
     }
      
